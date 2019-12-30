@@ -48,7 +48,7 @@
 
     <script type="text/javascript">
       
-      function bold(descrip){
+     function bold(descrip){
         if (descrip)
           return "heck" + descrip + "</strong>";
         else
@@ -69,7 +69,7 @@
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false, "order":[[2,"desc"]]},
-        custom_formatting: [[0, bold]],
+        custom_formatting: [[2, bold]],
         custom_formatting: [[1, format_link]]
        
     ,
