@@ -47,19 +47,21 @@
 
 
     <script type="text/javascript">
-      function format_link(link){
-        if (link)
-          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-        else
-          return "";
-      };
-
-       function bold(descrip){
+      
+      function bold(descrip){
         if (descrip)
           return "<strong>" + descrip + "</strong>";
         else
           return "";
       }
+      function format_link(link){
+        if (link)
+          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+        else
+          return "";
+      }
+
+
       
       CsvToHtmlTable.init({
         csv_path: 'data/index-of-idrh-talks.csv',
