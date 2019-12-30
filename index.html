@@ -54,13 +54,21 @@
           return "";
       }
 
+       function bold(content){
+        if (content)
+          return "<strong>" + content + "</strong>";
+        else
+          return "";
+      }
+      
       CsvToHtmlTable.init({
         csv_path: 'data/index-of-idrh-talks.csv',
         element: 'table-container', 
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false, "order":[[2,"desc"]]},
-        custom_formatting: [[4, format_link]]
+        custom_formatting: [[1, bold]],
+        custom_formatting: [[2, format_link]]
        
     ,
       });
