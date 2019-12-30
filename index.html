@@ -54,9 +54,9 @@
           return "";
       }
 
-       function bold(content){
-        if (content)
-          return "<strong>" + content + "</strong>";
+       function format_descrip(descrip){
+        if (descrip)
+          return "<strong>" + descrip + "</strong>";
         else
           return "";
       }
@@ -67,7 +67,7 @@
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false, "order":[[2,"desc"]]},
-        custom_formatting: [[0, bold]],
+        custom_formatting: [[0, format_descrip]],
         custom_formatting: [[1, format_link]]
        
     ,
