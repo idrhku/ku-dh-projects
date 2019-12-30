@@ -46,11 +46,17 @@
     <script type="text/javascript" src="js/csv_to_html_table.js"></script>
 
 
-    <script type="text/javascript">
-      
+    <script type="text/javascript">      
+     function format_link(link){
+        if (link)
+          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+        else
+          return "";
+      }
+ 
      function bold(link){
         if (link)
-          return "heck" + link + "</strong>";
+          return "<strong>" + link + "</strong>";
         else
           return "";
       }
@@ -63,8 +69,8 @@
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false, "order":[[2,"desc"]]},
+        custom_formatting: [[1, format_link]],
         custom_formatting: [[2, bold]]       
-    ,
       });
     </script>
   </body>
