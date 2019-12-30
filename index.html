@@ -52,9 +52,9 @@
           return "<a href='" + link + "' target='_blank'>" + link + "</a>";
         else
           return "";
-      }
+      };
 
-       function format_descrip(descrip){
+       function bold(descrip){
         if (descrip)
           return "<strong>" + descrip + "</strong>";
         else
@@ -67,7 +67,7 @@
         allow_download: false,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": false, "order":[[2,"desc"]]},
-        custom_formatting: [[0, format_descrip]],
+        custom_formatting: [[0, bold]],
         custom_formatting: [[1, format_link]]
        
     ,
